@@ -69,7 +69,7 @@ vagrant ssh
 at /vagrant > 
 $ npm install 
 => error (assosiated with symlink )
-```bash
+```
 
 ```bash
 $ mkdir /tmp/test
