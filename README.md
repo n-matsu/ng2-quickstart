@@ -58,36 +58,36 @@ with excellent support for Angular apps that use routing.
 * `npm run postinstall` - called by *npm* automatically *after* it successfully completes package installation. This script installs the TypeScript definition files this app requires.
 
 
+### memo
 
 ```bash
-55411 verbose stack Error: angular2-quickstart@1.0.0 postinstall: `typings install`
-55411 verbose stack Exit status 1
-55411 verbose stack     at EventEmitter.<anonymous> (/home/vagrant/.nvm/versions/node/v5.9.1/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
-55411 verbose stack     at emitTwo (events.js:100:13)
-55411 verbose stack     at EventEmitter.emit (events.js:185:7)
-55411 verbose stack     at ChildProcess.<anonymous> (/home/vagrant/.nvm/versions/node/v5.9.1/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-55411 verbose stack     at emitTwo (events.js:100:13)
-55411 verbose stack     at ChildProcess.emit (events.js:185:7)
-55411 verbose stack     at maybeClose (internal/child_process.js:850:16)
-55411 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
-55412 verbose pkgid angular2-quickstart@1.0.0
-55413 verbose cwd /tmp/test
-55414 error Linux 2.6.32-573.el6.x86_64
-55415 error argv "/home/vagrant/.nvm/versions/node/v5.9.1/bin/node" "/home/vagrant/.nvm/versions/node/v5.9.1/bin/npm" "install"
-55416 error node v5.9.1
-55417 error npm  v3.7.3
-55418 error code ELIFECYCLE
-55419 error angular2-quickstart@1.0.0 postinstall: `typings install`
-55419 error Exit status 1
-55420 error Failed at the angular2-quickstart@1.0.0 postinstall script 'typings install'.
-55420 error Make sure you have the latest version of node.js and npm installed.
-55420 error If you do, this is most likely a problem with the angular2-quickstart package,
-55420 error not with npm itself.
-55420 error Tell the author that this fails on your system:
-55420 error     typings install
-55420 error You can get information on how to open an issue for this project with:
-55420 error     npm bugs angular2-quickstart
-55420 error Or if that isn't available, you can get their info via:
-55420 error     npm owner ls angular2-quickstart
-55420 error There is likely additional logging output above.
-55421 verbose exit [ 1, true ]```
+vagrant up
+vagrant ssh
+```
+
+```bash
+at /vagrant > 
+$ npm install 
+=> error (assosiated with symlink )
+```bash
+
+```bash
+$ mkdir /tmp/test
+$ cp -r /vagrant /tmp
+$npm install
+=> ok
+$npm start
+=> ok
+```
+
+```bash
+Vagrant.configure(2) do |config|
+・・・
+	config.vm.network "forwarded_port", guest: 3000, host: 3000
+	config.vm.network "forwarded_port", guest: 3001, host: 3001
+・・・
+end
+```
+
+http://192.168.33.10:3001/
+ok
