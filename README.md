@@ -74,6 +74,7 @@ $ npm install
 ```bash
 $ mkdir /tmp/test
 $ cp -r /vagrant /tmp/test
+$cd /vagrant /tmp/test
 $npm install
 => ok
 $npm start
